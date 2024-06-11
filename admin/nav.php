@@ -9,8 +9,7 @@
     if ($_SESSION['level'] == 'admin') {
         echo '
 <li class="list-group-item"><a href="?page=user-show">Data User</a></li>
-<li class="list-group-item"><a href="?page=user-add">Tambah Data User</a></li>
-';
+<li class="list-group-item"><a href="?page=user-add">Tambah Data User</a></li>';
     }
     ?>
     <li class="list-group-item"><a href="logout.php ">Logout</a></li>

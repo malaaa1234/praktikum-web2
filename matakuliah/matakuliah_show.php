@@ -1,6 +1,6 @@
 <div class="card">
     <div class="card-header">
-        <strong>Data Matakuliah</strong>
+        <strong>Data matakuliah</strong>
     </div>
     <div class="card-body">
         <form action="?page=matakuliah-show" method="POST">
@@ -25,10 +25,10 @@
                 <thead>
                     <tr>
                         <th>No</th>
-                        <th>Kode</th>
-                        <th>Nama</th>
+                        <th>kode</th>
+                        <th>nama</th>
                         <th>sks</th>
-                        <th>Semester</th>
+                        <th>semester</th>
                         <th>Aksi</th>
                     </tr>
                 </thead>
@@ -79,14 +79,12 @@
                     echo '<li class="page-item disabled"><a class="page-link" href="#"><span aria-hidden="true">&laquo;</span></a></li>';
                 } else {
                     $link_prev = ($page > 1) ? $page - 1 : 1;
-                    echo '<li class="page-item"><a class="page-link" href="?page=mahasiswa-show&halaman=1">First</a></li>';
-
-                    echo '<li class="page-item"><a class="page-link" href="?page=mahasiswa-show&halaman=' . $link_prev . '" aria-
-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>';
+                    echo '<li class="page-item"><a class="page-link" href="?page=matakuliah-show&halaman=1">First</a></li>';
+                    echo '<li class="page-item"><a class="page-link" href="?page=matakuliah-show&halaman=' . $link_prev . '" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>';
                 }
                 for ($i = $start_number; $i <= $end_number; $i++) {
                     $link_active = ($page == $i) ? ' active' : '';
-                    echo '<li class="page-item ' . $link_active . '"><a class="page-link" href="?page=mahasiswa-show&halaman=' . $i . '">' . $i .
+                    echo '<li class="page-item ' . $link_active . '"><a class="page-link" href="?page=matakuliah-show&halaman=' . $i . '">' . $i .
                         '</a></li>';
                 }
                 if ($page == $jumlah_page) {
@@ -94,11 +92,8 @@ label="Previous"><span aria-hidden="true">&laquo;</span></a></li>';
                     echo '<li class="page-item disabled"><a class="page-link" href="#">Last</a></li>';
                 } else {
                     $link_next = ($page < $jumlah_page) ? $page + 1 : $jumlah_page;
-
-                    echo '<li class="page-item"><a class="page-link" href="?page=mahasiswa-show&halaman=' . $link_next . '" aria-
-label="Next"><span aria-hidden="true">&raquo;</span></a></li>';
-
-                    echo '<li class="page-item"><a class="page-link" href="?page=mahasiswa-show&halaman=' . $jumlah_page .
+                    echo '<li class="page-item"><a class="page-link" href="?page=matakuliah-show&halaman=' . $link_next . '" aria-label="Next"><span aria-hidden="true">&raquo;</span></a></li>';
+                    echo '<li class="page-item"><a class="page-link" href="?page=matakuliah-show&halaman=' . $jumlah_page .
                         '">Last</a></li>';
                 }
                 ?>
